@@ -11,7 +11,7 @@ export const Hero = () => {
                 transition={{ duration: 0.8 }}
                 className="space-y-6"
             >
-                <div className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-indigo-600 h-[120px] md:h-[auto] flex items-center justify-center">
+                <div className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-indigo-600 h-[120px] md:h-[auto] flex items-center justify-center pb-2">
                     <TypeAnimation
                         sequence={[
                             "Halo, saya Fiky",

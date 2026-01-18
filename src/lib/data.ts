@@ -1,0 +1,42 @@
+export const projects = [
+    {
+        id: 1,
+        title: "SPK Internship Jepang",
+        tag: "ML.NET / Web App",
+        description: "Web application using ML.NET to predict job satisfaction for internship selection in Japan.",
+        tech: ["C#", "ML.NET", "ASP.NET", "SQL Server"],
+        colSpan: "md:col-span-2",
+    },
+    {
+        id: 2,
+        title: "NLP Spam Detection",
+        tag: "AI / Machine Learning",
+        description: "Text classification system using Naive Bayes & SVM to detect spam messages with high accuracy.",
+        tech: ["Python", "Scikit-learn", "Pandas"],
+        colSpan: "md:col-span-1",
+    },
+    {
+        id: 3,
+        title: "Proyek Website BPS",
+        tag: "Internal System",
+        description: "Internal survey management system for Badan Pusat Statistik (Statistics Indonesia).",
+        tech: ["Laravel", "MySQL", "Bootstrap"],
+        colSpan: "md:col-span-1",
+    },
+    {
+        id: 4,
+        title: "Fish Disease Diagnosis",
+        tag: "Python / NLP",
+        description: "Interactive chatbot assisting aquarists in diagnosing fish diseases through symptom analysis.",
+        tech: ["Python", "Flask", "NLP"],
+        colSpan: "md:col-span-2",
+    },
+    {
+        id: 5,
+        title: "Voucher Wi-Fi System",
+        tag: "Network Management",
+        description: "Hotspot management system using Mikrotik and Mikhmon for voucher generation and billing.",
+        tech: ["Mikrotik", "Mikhmon", "Networking"],
+        colSpan: "md:col-span-3",
+    },
+];

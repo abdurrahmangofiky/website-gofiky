@@ -2,37 +2,24 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 
-// Project Data
-const projects = [
-    {
-        title: "NLP Spam Detection",
-        tag: "AI / Machine Learning",
-        description: "Advanced spam detection system leveraging deep learning models to identify unwanted messages with high accuracy.",
-        tech: ["Python", "TensorFlow", "BERT"],
-        colSpan: "md:col-span-2",
-    },
-    {
-        title: "Fish Diagnosis Chatbot",
-        tag: "Python / NLP",
-        description: "Interactive chatbot assisting aquarists in diagnosing fish diseases through symptom analysis.",
-        tech: ["Python", "NLP", "Flask"],
-        colSpan: "md:col-span-1",
-    },
-    {
-        title: "Org Culture Survey",
-        tag: "Web Development",
-        description: "Comprehensive survey application for assessing and analyzing organizational culture metrics.",
-        tech: ["Next.js", "PostgreSQL", "Tailwind"],
-        colSpan: "md:col-span-3",
-    },
-];
+type Project = {
+    id?: number;
+    title: string;
+    tag: string;
+    description: string;
+    tech: string[];
+    colSpan: string;
+};
 
-export const BentoGrid = () => {
+interface BentoGridProps {
+    items: Project[];
+}
+
+export const BentoGrid = ({ items }: BentoGridProps) => {
     return (
         <section className="py-20 px-4 max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold mb-10 text-center text-zinc-100">Featured Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[minmax(250px,auto)]">
-                {projects.map((project, idx) => (
+                {items.map((project, idx) => (
                     <motion.div
                         key={idx}
                         className={`glass-card p-8 rounded-2xl flex flex-col justify-between ${project.colSpan} group relative overflow-hidden`}
