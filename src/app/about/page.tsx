@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, Instagram } from "lucide-react";
 import Image from "next/image";
 
@@ -29,8 +28,8 @@ export default function AboutPage() {
     ];
 
     return (
-        <main className="min-h-screen bg-zinc-950 pt-24 px-4 pb-12">
-            <div className="max-w-4xl mx-auto space-y-12">
+        <main className="min-h-screen bg-zinc-950 pt-32 px-6 pb-12">
+            <div className="max-w-6xl mx-auto space-y-12">
                 {/* Header Section */}
                 <section className="flex flex-col md:flex-row items-center gap-8 text-center md:text-left">
                     {/* Foto Profil */}
@@ -44,10 +43,10 @@ export default function AboutPage() {
                     </div>
 
                     <div className="space-y-4">
-                        <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-zinc-400">
+                        <h1 className="text-4xl md:text-5xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-zinc-400 pb-2">
                             Abdurrahman Gofiky
                         </h1>
-                        <p className="text-xl text-zinc-400">
+                        <p className="text-xl text-zinc-400 leading-relaxed">
                             Mahasiswa Informatika
                         </p>
                     </div>
@@ -55,7 +54,7 @@ export default function AboutPage() {
 
                 {/* Bio Section */}
                 <section className="space-y-4">
-                    <h2 className="text-2xl font-semibold text-white">About Me</h2>
+                    <h2 className="text-2xl font-bold tracking-tight text-white">About Me</h2>
                     <p className="text-zinc-400 leading-relaxed">
                         Halo! Saya adalah seorang mahasiswa Informatika yang memiliki ketertarikan mendalam pada Machine Learning, Natural Language Processing (NLP), dan Web Development. Saya senang membangun solusi inovatif yang menggabungkan kecerdasan buatan dengan pengalaman pengguna yang intuitif.
                     </p>
@@ -63,7 +62,7 @@ export default function AboutPage() {
 
                 {/* Connect & Socials Section */}
                 <section className="space-y-4">
-                    <h2 className="text-2xl font-semibold text-white">Connect & Socials</h2>
+                    <h2 className="text-2xl font-bold tracking-tight text-white">Connect & Socials</h2>
                     <div className="flex flex-wrap gap-4">
                         {socials.map((social) => (
                             <a
@@ -71,7 +70,7 @@ export default function AboutPage() {
                                 href={social.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center gap-3 px-6 py-4 bg-zinc-900 border border-zinc-800 rounded-lg hover:bg-zinc-800 transition-colors group"
+                                className="flex items-center gap-3 px-6 py-4 bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-2xl hover:bg-zinc-900/80 transition-all duration-300 group"
                             >
                                 <social.icon className="w-5 h-5 text-zinc-400 group-hover:text-white transition-colors" />
                                 <span className="text-zinc-300 font-medium group-hover:text-white transition-colors">
@@ -84,12 +83,12 @@ export default function AboutPage() {
 
                 {/* Skills Section */}
                 <section className="space-y-4">
-                    <h2 className="text-2xl font-semibold text-white">Skills</h2>
+                    <h2 className="text-2xl font-bold tracking-tight text-white">Skills</h2>
                     <div className="flex flex-wrap gap-2">
                         {["Python", "ML.NET", "Next.js", "Laravel", "Mikrotik"].map((skill) => (
                             <span
                                 key={skill}
-                                className="px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-zinc-300 text-sm"
+                                className="px-3 py-1 rounded-full bg-zinc-900/50 border border-zinc-800 text-zinc-300 text-sm hover:bg-zinc-800 transition-colors"
                             >
                                 {skill}
                             </span>
@@ -99,14 +98,14 @@ export default function AboutPage() {
 
                 {/* Experience Section */}
                 <section className="space-y-6">
-                    <h2 className="text-2xl font-semibold text-white">Experience</h2>
-                    <div className="p-6 rounded-2xl bg-zinc-900/30 border border-zinc-800">
+                    <h2 className="text-2xl font-bold tracking-tight text-white">Experience</h2>
+                    <div className="p-6 bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-2xl hover:bg-zinc-900/80 transition-all duration-300">
                         <div className="flex justify-between items-start mb-2">
                             <h3 className="text-xl font-medium text-white">Web Developer Intern</h3>
                             <span className="text-sm text-zinc-500">Internship (KP)</span>
                         </div>
                         <p className="text-blue-400 mb-4">Badan Pusat Statistik (BPS)</p>
-                        <p className="text-zinc-400">
+                        <p className="text-zinc-400 leading-relaxed">
                             Membangun website survei internal untuk mengelola data dan responden, meningkatkan efisiensi proses pengumpulan data statistik.
                         </p>
                     </div>
