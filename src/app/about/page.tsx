@@ -1,31 +1,12 @@
 "use client";
 
-import { Github, Linkedin, Mail, Instagram } from "lucide-react";
+// Imports removed
+
 import Image from "next/image";
 
 export default function AboutPage() {
-    const socials = [
-        {
-            name: "LinkedIn",
-            icon: Linkedin,
-            url: "https://www.linkedin.com/in/abdgof",
-        },
-        {
-            name: "GitHub",
-            icon: Github,
-            url: "https://github.com/abdurrahmangofiky",
-        },
-        {
-            name: "Email Me",
-            icon: Mail,
-            url: "mailto:abdurrahman.gofikyy@gmail.com",
-        },
-        {
-            name: "Instagram",
-            icon: Instagram,
-            url: "https://www.instagram.com/zoldyckgfky_?igsh=ZzZtZ2JnaWM5cTdj&utm_source=qr",
-        },
-    ];
+    // Socials data removed
+
 
     return (
         <main className="min-h-screen bg-zinc-950 pt-32 px-6 pb-12">
@@ -68,26 +49,7 @@ export default function AboutPage() {
                     </div>
                 </section>
 
-                {/* Connect & Socials Section */}
-                <section className="space-y-4">
-                    <h2 className="text-2xl font-bold tracking-tight text-white">Connect & Socials</h2>
-                    <div className="flex flex-wrap gap-4">
-                        {socials.map((social) => (
-                            <a
-                                key={social.name}
-                                href={social.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center gap-3 px-6 py-4 bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-2xl hover:bg-zinc-900/80 transition-all duration-300 group"
-                            >
-                                <social.icon className="w-5 h-5 text-zinc-400 group-hover:text-white transition-colors" />
-                                <span className="text-zinc-300 font-medium group-hover:text-white transition-colors">
-                                    {social.name}
-                                </span>
-                            </a>
-                        ))}
-                    </div>
-                </section>
+                {/* Connect & Socials Section Removed */}
 
                 {/* Skills Section */}
                 <section className="space-y-4">
@@ -104,20 +66,7 @@ export default function AboutPage() {
                     </div>
                 </section>
 
-                {/* Experience Section */}
-                <section className="space-y-6">
-                    <h2 className="text-2xl font-bold tracking-tight text-white">Experience</h2>
-                    <div className="p-6 bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-2xl hover:bg-zinc-900/80 transition-all duration-300">
-                        <div className="flex justify-between items-start mb-2">
-                            <h3 className="text-xl font-medium text-white">BPS Website Development</h3>
-                            <span className="text-sm text-zinc-500">Internship (KP)</span>
-                        </div>
-                        <p className="text-blue-400 mb-4">Frontend Web Developer Intern (BPS)</p>
-                        <p className="text-zinc-400 leading-relaxed">
-                            Developed the frontend interface for the "Organizational Culture Survey" (Survei Budaya Organisasi) application, aiming to automate and digitize the internal employee survey process.
-                        </p>
-                    </div>
-                </section>
+                {/* Experience Section Removed */}
             </div>
         </main>
     );

@@ -1,65 +1,45 @@
 import { Hero } from "@/components/Hero";
-import { BentoGrid } from "@/components/BentoGrid";
-import { TechStack } from "@/components/TechStack";
-import { projects } from "@/lib/data";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+
 
 export default function Home() {
-  // Filter specific projects for Home: "NLP Spam Detection" & "SPK Internship Jepang"
-  const featuredProjects = projects.filter(p =>
-    p.title.includes("STARTJAP") || p.title.includes("Chatbot Fish Disease Diagnosis")
-  );
+  const experiences = [
+    {
+      title: "Frontend Web Developer Intern",
+      company: "BPS (Badan Pusat Statistik)",
+      period: "June - August 2025",
+    },
+  ];
 
   return (
-    <main className="min-h-screen bg-zinc-950 selection:bg-blue-500/30">
-
-      {/* Background decoration */}
+    <main className="min-h-screen bg-zinc-950 selection:bg-blue-500/30 relative overflow-hidden">
+      {/* Blue glow effect - edges */}
       <div className="fixed inset-0 z-0 pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[128px]" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-[128px]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_40%,_rgba(30,64,175,0.15)_100%)]" />
       </div>
 
       <div className="relative z-10">
         <Hero />
 
-        {/* Quick Intro */}
-        <section className="flex justify-center -mt-10 mb-20 relative z-20">
-          <Link
-            href="/about"
-            className="group flex items-center gap-2 px-6 py-3 rounded-full bg-zinc-900/50 border border-zinc-800 hover:bg-zinc-800 transition-all text-zinc-300 hover:text-white"
-          >
-            View My Profile
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </Link>
-        </section>
-
-        <div className="my-20">
-          <TechStack />
-        </div>
-
-        <section id="featured" className="py-10 max-w-6xl mx-auto px-4">
-          <div className="text-center mb-10 space-y-4">
-            <h2 className="text-3xl font-bold text-zinc-100">Featured Projects</h2>
-            <p className="text-zinc-400 max-w-2xl mx-auto">
-              Some of my best work combining data analysis and system development.
-            </p>
-          </div>
-          <BentoGrid items={featuredProjects} />
-
-          <div className="flex justify-center mt-10">
-            <Link
-              href="/projects"
-              className="flex items-center gap-2 px-8 py-4 rounded-full bg-white text-black font-semibold hover:bg-zinc-200 transition-colors"
-            >
-              View All Projects
-            </Link>
+        {/* Experiences Section */}
+        <section className="max-w-4xl mx-auto px-4 sm:px-6 py-12 md:py-16">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-6 md:mb-8 text-center sm:text-left">Experiences</h2>
+          <div className="space-y-4 md:space-y-6">
+            {experiences.map((exp, index) => (
+              <div
+                key={index}
+                className="group"
+              >
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1 text-center sm:text-left">
+                  <h3 className="text-base sm:text-lg md:text-xl font-medium text-white group-hover:text-blue-400 transition-colors">
+                    {exp.title} <span className="text-zinc-500">@</span>{" "}
+                    <span className="text-zinc-300">{exp.company}</span>
+                  </h3>
+                  <span className="text-xs sm:text-sm text-zinc-500">{exp.period}</span>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
-
-        <footer className="py-10 text-center text-zinc-600 text-sm">
-          <p>© {new Date().getFullYear()} Fiky. Built with Next.js & Tailwind.</p>
-        </footer>
       </div>
     </main>
   );
