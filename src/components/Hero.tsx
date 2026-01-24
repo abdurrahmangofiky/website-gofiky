@@ -27,7 +27,7 @@ export const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
-                className="space-y-4 sm:space-y-5 relative z-20 pt-32 sm:pt-28 md:mt-[30vh] px-6"
+                className="space-y-3 sm:space-y-4 relative z-20 px-6 mt-[25vh] sm:mt-[30vh] md:mt-[35vh]"
             >
                 {/* Main Title */}
                 <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight">
