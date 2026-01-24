@@ -16,9 +16,9 @@ const GlobeDemo = dynamic(() => import("./Globe3D").then(mod => ({ default: mod.
 
 export const Hero = () => {
     return (
-        <section className="min-h-screen flex flex-col items-center text-center relative pt-28 md:pt-0 md:justify-center">
-            {/* 3D Globe - Background - Hidden on small mobile, visible on larger screens */}
-            <div className="absolute inset-0 z-0 hidden sm:block">
+        <section className="min-h-screen flex flex-col items-center text-center relative">
+            {/* 3D Globe - Background - Visible on all screens */}
+            <div className="absolute inset-0 z-0">
                 <GlobeDemo />
             </div>
 
@@ -27,7 +27,7 @@ export const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
-                className="space-y-4 sm:space-y-5 relative z-20 mt-0 sm:mt-[35vh] px-6"
+                className="space-y-4 sm:space-y-5 relative z-20 pt-32 sm:pt-28 md:mt-[30vh] px-6"
             >
                 {/* Main Title */}
                 <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight">

@@ -54,7 +54,7 @@ export default function AboutPage() {
                     className="space-y-4"
                 >
                     <h2 className="text-xl font-bold tracking-tight text-white flex items-center gap-2">
-                        <span className="text-2xl">👋</span> About Me
+                        <span className="text-2xl"></span> About Me
                     </h2>
                     <div className="p-6 bg-zinc-900/60 backdrop-blur-md border border-zinc-800 rounded-2xl space-y-4 hover:border-zinc-700 transition-colors duration-300">
                         <p className="text-zinc-300 leading-relaxed">
